@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8D7BD">
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Booking and Payment"
+                    android:textColor="#4E392D"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <!-- VILLA INFO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:background="@drawable/bg_card"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/villa1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Luxurios Villa Bali"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Raya Nusa Dua Selatan, Lot III, Benoa Bali"
+                        android:textSize="12sp"
+                        android:textColor="#666" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp.2.385.000 /night"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Booking Info -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Booking"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Item Booking (Date) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/date" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Dates" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15–18 Mar 2024" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Modal: Payment Method -->
+    <LinearLayout
+        android:id="@+id/payment_modal"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_modal_white"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="visible">
+
+        <!-- Header Modal -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_close_modal"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/close" />
+        </RelativeLayout>
+
+        <!-- Metode Pembayaran -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_payment_option"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/mastercard" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="BRI"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/done" />
+        </LinearLayout>
+
+        <!-- Tombol Confirm -->
+        <Button
+            android:id="@+id/btn_confirm_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#5C3A1E"
+            android:text="Confirm and Pay"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>
