@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.luxoraapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_searchresult"
+        android:name="com.example.luxoraapp.ui.search.SearchResultFragment"
+        android:label="search result"
+        tools:layout="@layout/fragment_searchresult">
+
+        <!-- Action pindah ke PropertyDetail -->
+        <action
+            android:id="@+id/action_searchResultFragment_to_propertyDetailFragment"
+            app:destination="@id/navigation_propertydetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_propertydetail"
+        android:name="com.example.luxoraapp.ui.home.propertydetailFragment"
+        android:label="property detail"
+        tools:layout="@layout/fragment_propertydetail" />
+
+
+    <fragment
+        android:id="@+id/navigation_welcome"
+        android:name="com.example.luxoraapp.ui.auth.WelcomeFragment"
+        android:label="welcome "
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.luxoraapp.ui.auth.SignUpFragment"
+        android:label="sign up"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.luxoraapp.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.example.luxoraapp.ui.booking.BookingFragment"
+        android:label="booking"
+        tools:layout="@layout/fragment_booking" />
+    <fragment
+        android:id="@+id/navigation_bookingConfirm"
+        android:name="com.example.luxoraapp.ui.booking.bookingConfirmFragment"
+        android:label="booking Confirm"
+        tools:layout="@layout/fragment_booking_confirm" />
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.luxoraapp.ui.favorite.favoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.luxoraapp.ui.profile.profileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

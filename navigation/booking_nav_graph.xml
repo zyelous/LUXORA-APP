@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/booking_nav_graph"
+    app:startDestination="@id/bookingFragment">
+
+
+    <!-- Fragment 1: Search Result -->
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.luxoraapp.ui.booking.BookingFragment"
+        android:label="Booking">
+        <action
+            android:id="@+id/action_booking_to_detail"
+            app:destination="@id/detail_pemesananFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_pemesananFragment"
+        android:name="com.example.luxoraapp.ui.booking.detail_pemesananFragment"
+        android:label="Detail Pemesanan">
+        <action
+            android:id="@+id/action_detail_to_pembayaran"
+            app:destination="@id/pembayaranFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pembayaranFragment"
+        android:name="com.example.luxoraapp.ui.booking.pembayaranFragment"
+        android:label="Pembayaran">
+        <action
+            android:id="@+id/action_pembayaran_to_konfirmasi"
+            app:destination="@id/bookingConfirmFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingConfirmFragment"
+        android:name="com.example.luxoraapp.ui.booking.bookingConfirmFragment"
+        android:label="Konfirmasi" />
+</navigation>
