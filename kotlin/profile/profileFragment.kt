@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.example.luxoraapp.R
+import com.example.luxoraapp.ui.auth.AuthActivity
 import com.example.luxoraapp.ui.auth.WelcomeFragment
 
 class ProfileFragment : Fragment() {
@@ -20,13 +21,12 @@ class ProfileFragment : Fragment() {
         val logout = view.findViewById<ImageView>(R.id.logout)
 
         logout.setOnClickListener {
-            requireActivity().findViewById<View>(R.id.bottom_nav).visibility = View.GONE
 
-            // Tampilkan WelcomeFragment
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_activity_main, WelcomeFragment())
-                .commit()
-        }
+            // Kembali ke halaman login
+            val intent = Intent(requireContext(), AuthActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish() 
+        }
 
         return view
     }
